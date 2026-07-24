@@ -14,7 +14,7 @@ Este directorio contiene toda la documentación funcional, técnica y de arquite
 6. Versionado
 7. Referencias
 8. Documento de Referencia
-9. Licencia
+9. Consideraciones
 
 ---
 
@@ -61,20 +61,20 @@ docs/
 
 Para comprender la plataforma de forma progresiva, se recomienda consultar los documentos en el siguiente orden:
 
-1. VIG-DOC-000 — DOCUMENTATION_STANDARD
-2. VIG-DOC-001 — PRODUCT_VISION
-3. VIG-DOC-002 — ARCHITECTURE
-4. VIG-DOC-003 — DATA_MODEL
-5. VIG-DOC-004 — PROTOCOL_SPEC
-6. VIG-DOC-005 — RULE_ENGINE
-7. VIG-DOC-006 — API_SPEC
-8. VIG-DOC-007 — SECURITY
-9. VIG-DOC-008 — DEPLOYMENT
-10. VIG-DOC-009 — ROADMAP
-11. VIG-DOC-010 — GLOSSARY
-12. VIG-DOC-011 — DEVICE_SPEC
-13. VIG-DOC-012 — DEVELOPMENT_GUIDE
-14. VIG-DOC-013 — CONVENTIONS
+1. VIG-DOC-00 — DOCUMENTATION_STANDARD
+2. VIG-DOC-01 — PRODUCT_VISION
+3. VIG-DOC-02 — ARCHITECTURE
+4. VIG-DOC-03 — DATA_MODEL
+5. VIG-DOC-04 — PROTOCOL_SPEC
+6. VIG-DOC-05 — RULE_ENGINE
+7. VIG-DOC-06 — API_SPEC
+8. VIG-DOC-07 — SECURITY
+9. VIG-DOC-08 — DEPLOYMENT
+10. VIG-DOC-09 — ROADMAP
+11. VIG-DOC-10 — GLOSSARY
+12. VIG-DOC-11 — DEVICE_SPEC
+13. VIG-DOC-12 — DEVELOPMENT_GUIDE
+14. VIG-DOC-13 — CONVENTIONS
 
 ---
 
@@ -82,20 +82,20 @@ Para comprender la plataforma de forma progresiva, se recomienda consultar los d
 
 | ID | Documento | Descripción |
 |----|-----------|-------------|
-| VIG-DOC-000 | DOCUMENTATION_STANDARD | Estándar oficial para la documentación del proyecto. |
-| VIG-DOC-001 | PRODUCT_VISION | Visión del producto, objetivos, alcance y propuesta de valor. |
-| VIG-DOC-002 | ARCHITECTURE | Arquitectura general de la plataforma. |
-| VIG-DOC-003 | DATA_MODEL | Modelo de datos y entidades del sistema. |
-| VIG-DOC-004 | PROTOCOL_SPEC | Especificación del protocolo de comunicación con los dispositivos. |
-| VIG-DOC-005 | RULE_ENGINE | Motor de reglas de negocio y generación de eventos. |
-| VIG-DOC-006 | API_SPEC | Especificación de las APIs del sistema. |
-| VIG-DOC-007 | SECURITY | Políticas y arquitectura de seguridad. |
-| VIG-DOC-008 | DEPLOYMENT | Estrategia de despliegue e infraestructura. |
-| VIG-DOC-009 | ROADMAP | Evolución planificada del producto. |
-| VIG-DOC-010 | GLOSSARY | Glosario de términos técnicos y de negocio. |
-| VIG-DOC-011 | DEVICE_SPEC | Especificación funcional del dispositivo IoT. |
-| VIG-DOC-012 | DEVELOPMENT_GUIDE | Guía para el desarrollo del proyecto. |
-| VIG-DOC-013 | CONVENTIONS | Convenciones generales del proyecto. |
+| VIG-DOC-00 | DOCUMENTATION_STANDARD | Estándar oficial para la documentación del proyecto. |
+| VIG-DOC-01 | PRODUCT_VISION | Visión del producto, objetivos, alcance y propuesta de valor. |
+| VIG-DOC-02 | ARCHITECTURE | Arquitectura general de la plataforma. |
+| VIG-DOC-03 | DATA_MODEL | Modelo de datos y entidades del sistema. |
+| VIG-DOC-04 | PROTOCOL_SPEC | Especificación del protocolo de comunicación con los dispositivos. |
+| VIG-DOC-05 | RULE_ENGINE | Motor de reglas de negocio y generación de eventos. |
+| VIG-DOC-06 | API_SPEC | Especificación de las APIs del sistema. |
+| VIG-DOC-07 | SECURITY | Políticas y arquitectura de seguridad. |
+| VIG-DOC-08 | DEPLOYMENT | Estrategia de despliegue e infraestructura. |
+| VIG-DOC-09 | ROADMAP | Evolución planificada del producto. |
+| VIG-DOC-10 | GLOSSARY | Glosario de términos técnicos y de negocio. |
+| VIG-DOC-11 | DEVICE_SPEC | Especificación funcional del dispositivo IoT. |
+| VIG-DOC-12 | DEVELOPMENT_GUIDE | Guía para el desarrollo del proyecto. |
+| VIG-DOC-13 | CONVENTIONS | Convenciones generales del proyecto. |
 
 ---
 
@@ -113,7 +113,7 @@ Cada ADR documenta una decisión arquitectónica importante y constituye un regi
 
 ## images/
 
-Almacena diagramas, wireframes, mockups e imágenes utilizadas por la documentación, es decir, almacena todos los recursos gráficos utilizados por la documentación.
+Almacena todos los recursos gráficos utilizados por la documentación, incluyendo diagramas, wireframes, mockups e imágenes.
 
 Estructura:
 
@@ -126,15 +126,36 @@ Estructura:
 
 # 6. Versionado
 
-Todos los documentos siguen **Semantic Versioning**.
+Todos los documentos oficiales del proyecto utilizan **Semantic Versioning (SemVer)** para controlar su evolución de manera independiente.
 
-Cada documento mantiene su propio versionado de manera independiente.
+Cada documento mantiene su propio número de versión, el cual deberá actualizarse cuando se realicen modificaciones en su contenido.
+
+La estructura del versionado es la siguiente:
 
 ```text
 MAJOR.MINOR.PATCH
 ```
 
-Ejemplo:
+Donde:
+
+* **MAJOR:** Cambios importantes que modifican significativamente la estructura o el contenido del documento.
+* **MINOR:** Incorporación de nuevas secciones, ampliaciones o mejoras que mantienen la compatibilidad con versiones anteriores.
+* **PATCH:** Correcciones menores, ajustes de redacción, ortografía o formato que no alteran el contenido del documento.
+
+Ejemplos:
+
+```text
+1.0.0  Primera versión oficial del documento.
+1.0.1  Corrección de errores menores.
+1.1.0  Incorporación de nuevo contenido.
+2.0.0  Reestructuración importante del documento.
+```
+
+---
+
+# 7. Referencias
+
+La documentación utiliza identificadores únicos para facilitar las referencias cruzadas entre documentos, diagramas, componentes y recursos del proyecto.
 
 | Prefijo | Descripción |
 |---------|-------------|
@@ -145,25 +166,19 @@ Ejemplo:
 | VIG-UI | Interfaces gráficas |
 | VIG-WF | Wireframes |
 | VIG-BR | Reglas de negocio |
-| VIG-API | APIs |
-
----
-
-# 7. Referencias
-
-La documentación utiliza identificadores únicos para facilitar las referencias cruzadas.
+| VIG-API | Especificaciones de API |
 
 Ejemplos:
 
 ```text
-VIG-DOC-002
-VIG-ADR-0001
-VIG-ARC-001
-VIG-DB-001
-VIG-UI-001
-VIG-WF-001
-VIG-BR-001
-VIG-API-001
+VIG-DOC-02
+VIG-ADR-01
+VIG-ARC-01
+VIG-DB-01
+VIG-UI-01
+VIG-WF-01
+VIG-BR-01
+VIG-API-01
 ```
 
 ---
@@ -172,14 +187,14 @@ VIG-API-001
 
 Toda la documentación del proyecto deberá cumplir las reglas establecidas en:
 
-**VIG-DOC-000 — DOCUMENTATION_STANDARD**
+**VIG-DOC-00 — DOCUMENTATION_STANDARD**
 
 Este documento constituye el estándar oficial de documentación para Vigía Platform.
 
 ---
 
-# 9. Licencia
+# 9. Consideraciones
 
 Toda la documentación forma parte del proyecto Vigía Platform y deberá mantenerse alineada con la evolución funcional y técnica del software.
 
-Cualquier modificación deberá seguir las normas definidas en VIG-DOC-000.
+Cualquier modificación deberá seguir las normas definidas en VIG-DOC-00.
