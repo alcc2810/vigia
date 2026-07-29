@@ -69,7 +69,7 @@ Las principales consecuencias son:
 * Altos costos de búsqueda
 * Baja capacidad de reacción
 * Escasa información para la toma de decisiones
-* Permanencia de una persona para la supervisión
+* Necesidad de supervisión permanente por parte del personal
 
 La mayoría de soluciones existentes presentan una o varias de las siguientes limitaciones:
 
